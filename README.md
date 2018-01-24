@@ -19,3 +19,4 @@ The neural network worked really well in predicting the keys. e.g it could predi
 
 <b>OBSERVATION:</b> CNN are good at finding important features. It found the best feature that would help it correlate to the output classes. :-) Well 86% accuracy with 6 hours training on GTX 960 2GB paid off. Though i may try Google Collab. Still working on it.
 <b>Youtube link :</b><a href="https://www.youtube.com/watch?v=g2oiNb-_4fQ">https://www.youtube.com/watch?v=g2oiNb-_4fQ</a>
+PSIt can get out of corners at sometime. Since i trained it for those data. So ya.
