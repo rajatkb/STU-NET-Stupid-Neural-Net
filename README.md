@@ -19,4 +19,9 @@ The neural network worked really well in predicting the keys. e.g it could predi
 
 <b>OBSERVATION:</b> CNN are good at finding important features. It found the best feature that would help it correlate to the output classes. :-) Well 86% accuracy with 6 hours training on GTX 960 2GB paid off. Though i may try Google Collab. Still working on it.
 <b>Youtube link :</b><a href="https://www.youtube.com/watch?v=g2oiNb-_4fQ">https://www.youtube.com/watch?v=g2oiNb-_4fQ</a>
-PS:It can get out of corners at sometime. Since i trained it for those data. So ya.
+PS:It can get out of corners at sometime. Since i trained it for those data.
+
+<b>Update 2:</b> Fixed the keys. But realised it was using the side walls as guide to move though i never drove like that. Maybe found something in the side wall that correlated with the keys. Hard to say
+
+# STUNET v2
+This time we try a new approach. I will split the image for the network to look at. It will not get the image at once put two halves of it. And the network will be forced to not focus on the car anymore and focus on entities like sidelines, markers, white tracks etc hopefully.   
