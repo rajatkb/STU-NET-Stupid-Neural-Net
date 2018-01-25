@@ -20,6 +20,9 @@ kb = PyKeyboard()
 
 def forward():
     kb.press_key('W')
+    kb.release_key('A')
+    kb.release_key('D')
+    kb.release_key('S')
 
 def backward(): 
     kb.release_key('W')
@@ -27,12 +30,14 @@ def backward():
     
 
 def right():
-    kb.release_key('A')
     kb.press_key('D')
+    kb.release_key('A')
+    kb.release_key('S')
     
 def left():
-    kb.release_key('D')
     kb.press_key('A')
+    kb.release_key('D')
+    kb.release_key('S')
     
 def nothing():
     kb.release_key('W')
@@ -75,6 +80,7 @@ if __name__ == '__main__':
         res = model.predict(reduced_view)
         move = move_decode[np.argmax(res[0])]
         print("press ",move ," keycheck :" ,key_check())
+        cv2.imshow('frame' , current_view)
         key_press[move]()
         if cv2.waitKey(1) == 27 :
             break
