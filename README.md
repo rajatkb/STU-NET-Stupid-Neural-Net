@@ -25,12 +25,11 @@ PS:It can get out of corners at sometime. Since i trained it for those data.
 
 # STUNET v2
 This time we try a new approach. I will split the image for the network to look at. It will not get the image at once put two halves of it. And the network will be forced to not focus on the car anymore and focus on entities like sidelines, markers, white tracks etc hopefully. 
-So it worked the model imporoved significantly. The newer model even trained faster on the given dataset. Makes me question i should add more data and diverisify the data. Now first let me explain the bifocal approach. Fancy name i know !!! <br>
-<br>
+
+So it worked the model imporoved significantly. The newer model even trained faster on the given dataset. Makes me question i should add more data and diverisify the data. Now first let me explain the bifocal approach. Fancy name i know !!!
+
 <h4>Bifocal : Nvidias modified Neural network architecture</h4>
-First thing look at this article from Nvidia <a href="https://devblogs.nvidia.com/deep-learning-self-driving-cars/">End to end Deep learning Self Driving Car</a> <br>
-I used their model for the convolution layers. But where they put the entire image through the sequential network I split the image in 75% from both side. i.e for a width of 400 i will have two image of 250 width starting from both left and right which kinda mimics how our eyes see and percieve depth in world. Then i took the output and simple concatenated it like in inception layers and then flattened and then dense layers. Also i have included more classes at the output layer.
-<br>
+First thing look at this article from Nvidia <a href="https://devblogs.nvidia.com/deep-learning-self-driving-cars/">End to end Deep learning Self Driving Car</a> I used their model for the convolution layers. But where they put the entire image through the sequential network I split the image in 75% from both side. i.e for a width of 400 i will have two image of 250 width starting from both left and right which kinda mimics how our eyes see and percieve depth in world. Then i took the output and simple concatenated it like in inception layers and then flattened and then dense layers. Also i have included more classes at the output layer.
 
 <b>OBSERVATION:</b> Everythings improved. Though i did noticed really interesting stuff both in test and train times. During training a batch size of 30 was actually making the accuracy fluctuate at one point around 65% and then suddenly when i decresed the batch size it got worse and then when i increased it to 50 it got better but stuck at 70 and then when finally tuned to 100 gave the best performance. This was obvious since larger batch size averages the differntial over large data and hence will be smaller and more directed towards convergence. During test time that is while driving the data is biased. VERY MUCH BIASED. Even if there is good chance of turning the softmax would give slight higher percentage to forward hence argmax would fail and have forwrad 'W' most times. Issues....
 this is the latest update Youtube: <a href="https://youtu.be/WtuLxI6jLPk">STUNETv2</a><br>
