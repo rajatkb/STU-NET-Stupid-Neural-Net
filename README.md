@@ -40,5 +40,5 @@ Next will train same on third person view and have the data shuffled and rid of 
 <b>Next :</b> We add more data and Will be shifting to pretrained YOLO model possibly for object detection and use those input as the input for driving movement along with the input of bifocal_nvidia. The objective here is to perfect the instantaneous drive decisions so that later on when the model is extended with RNN and Q-Learning it will atleast have good features to take its decision or learn from past values i.e Sequence. 
 
 <b>ISSUE:</b> 
-<img src="https://imgur.com/a/KmDCu" />
+<img src="https://i.imgur.com/3QpGfya.png" />
 This model is not being effective on the road. Its erratic. It acts really well at some points. At the other it doesnt knows. So the perception problem needs to be solved i.e higher res images. 
