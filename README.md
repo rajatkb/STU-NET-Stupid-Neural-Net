@@ -38,3 +38,7 @@ Next will train same on third person view and have the data shuffled and rid of 
 <b>Update :</b> Well i did that. I updated my code to have the intake or the data collection operation regulate the intake number of forward vs other movement. Earlier the data was heavily biased towards forward movement. Now with that bias removed the data is more unbiased hence the model will try to fit it to the various scenarios of the data. The model is doing good compared to previous one with just mere 10k data. We nee atleast 100k.  
 
 <b>Next :</b> We add more data and Will be shifting to pretrained YOLO model possibly for object detection and use those input as the input for driving movement along with the input of bifocal_nvidia. The objective here is to perfect the instantaneous drive decisions so that later on when the model is extended with RNN and Q-Learning it will atleast have good features to take its decision or learn from past values i.e Sequence. 
+
+<b>ISSUE:</b> 
+<img src="https://imgur.com/a/KmDCu" />
+This model is not being effective on the road. Its erratic. It acts really well at some points. At the other it doesnt knows. So the perception problem needs to be solved i.e higher res images. 
