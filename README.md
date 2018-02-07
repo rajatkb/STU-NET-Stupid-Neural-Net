@@ -41,4 +41,11 @@ Next will train same on third person view and have the data shuffled and rid of 
 
 <b>ISSUE:</b> 
 <img src="https://i.imgur.com/3QpGfya.png" />
-This model is not being effective on the road. Its erratic. It acts really well at some points. At the other it doesnt knows. So the perception problem needs to be solved i.e higher res images. 
+This model is not being effective on the road. Its erratic. It acts really well at some points. At the other it doesnt knows. So the perception problem needs to be solved.  
+
+# STUNET v3  
+The only major changes are well using a bit higher res image. This time trying to fit a 100x200 image into the layers and see if that yields any nice results. Apart from that i missed normalization in the beggining of the input. Added that so now in the same 2nd layer the features are more prominent. Using fully dense layers now with no dropouts what so ever. Some visualized layers. Features are more prominent now. But the game world lacks consistency for the model to capture especially in the track lines. I am shifting between 3rd person and first person view without any major gain. 
+
+<b>Upddate 7 Feb :<b/>  
+<img src="https://i.imgur.com/AnW27Zj.png"/>  
+  It did learn something. Need to figure out proper image size for maximising feature extraction.
