@@ -46,6 +46,18 @@ This model is not being effective on the road. Its erratic. It acts really well 
 # STUNET v3  
 The only major changes are well using a bit higher res image. This time trying to fit a 100x200 image into the layers and see if that yields any nice results. Apart from that i missed normalization in the beggining of the input. Added that so now in the same 2nd layer the features are more prominent. Using fully dense layers now with no dropouts what so ever. Some visualized layers. Features are more prominent now. But the game world lacks consistency for the model to capture especially in the track lines. I am shifting between 3rd person and first person view without any major gain. 
 
-<b>Upddate 7 Feb :<b/>  
+<b>Upddate 7 Feb :</b>  
 <img src="https://i.imgur.com/AnW27Zj.png"/>  
   It did learn something. Need to figure out proper image size for maximising feature extraction.
+
+<b>Update :</b> More data improved it maybe and here is the visualization of the lower levels  
+Youtube link: <a src="https://www.youtube.com/watch?v=a7gLpCjQMUk">STUNETv3 improved</a>  
+Ohh look at this too better filter maybe  
+
+<img src="https://i.imgur.com/z76WP21.png" />  
+  So this one is my final attempt at this model  
+
+Before shifting to a new model i would increase the data and try to see whether it drives better or not. Whats kind of worrying to me is the speed at which it is training and converging. It converges really fast. So it kind of makes me wonder is it finding shortcuts in the data. Though i dont mind shortcuts provided it generalizes well , but then again its not generalizing well. I just have to test with more training data with approx. of 100k frames of data. Currently i am training with 26k frames , which takes only about few minutes to train.  
+Sentdex did 18 hours of training on a TITAN X to get the kind of accuracy he had after his initiall attempts with AlexNet. And here i kind of have almost similar result compared to his beggining versions with this model and more controlled data. 
+
+
