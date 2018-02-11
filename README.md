@@ -58,6 +58,14 @@ Ohh look at this too better filter maybe
   So this one is my final attempt at this model  
 
 Before shifting to a new model i would increase the data and try to see whether it drives better or not. Whats kind of worrying to me is the speed at which it is training and converging. It converges really fast. So it kind of makes me wonder is it finding shortcuts in the data. Though i dont mind shortcuts provided it generalizes well , but then again its not generalizing well. I just have to test with more training data with approx. of 100k frames of data. Currently i am training with 26k frames , which takes only about few minutes to train.  
-Sentdex did 18 hours of training on a TITAN X to get the kind of accuracy he had after his initiall attempts with AlexNet. And here i kind of have almost similar result compared to his beggining versions with this model and more controlled data. 
+Sentdex did 18 hours of training on a TITAN X to get the same kind of accuracy after his initiall attempts with AlexNet. And here i kind of have almost similar result compared to his beggining versions with this model and more controlled data. So actually this is actually kind of worrying. So NEED MORE DATA !!..  
+
+<img src="https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png" />  
+  Ya this is the nvidia's architecture . Quite small and simple and it works way to good.  
+  
+<img src="https://i.imgur.com/reAD4Ph.png" />
+  And this is my own modified version.
+
+I know nothing special here but then again maybe this wierd model modfication is maybe why i can see better result in smaller but proper training sets. The next movie will to add a Eulerian distance in the concatenation point. Hence essentially creating a bottleneck which will i think may turn into a meaussured metric of how much the car should turn left or right. But i think this will only work with a recurrent network since this meassured metric will change in instants and hence i need the model to consider past values and then take turns. So next step EULERIAN BIFOCAL.
 
 
