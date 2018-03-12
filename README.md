@@ -82,7 +82,7 @@ The model
 In the latest version i actually messed up big time. Well the idea was that forward and backward & the turning are two sepparate sets of movement then why should they be predicted together. Rather they should be independent in nature of their prediction. So i just created two branch of the same network after the convolution layer. I was expecting some miracle that it will work excellent but no. I was wrong. Now i am currently stuck and experimenting with this model with no positive result. Though my future approach would remain none the less the same. Have decoupled prediction of the movements.
 
 The model
-<img src="blob:https://imgur.com/3411b5bb-50db-4512-9c27-8c7c620ddaad">
+<img src="https://i.imgur.com/bOq16HF.png">
 
 ## upadte 12 march 2018  
 Moving on to learning other stuff. Will be back to this once i understand Reinforcement Learning environments better i.e OPENAI gym here i come. :-p
